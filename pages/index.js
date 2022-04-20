@@ -112,12 +112,14 @@ export default function Home() {
           </div>
         )}
 
-        <div className="flex flex-col items-center mt-8 bg-green-200">
-          <p className="mb-2 font-bold text-3xl"> Kazananlar </p>
-          {winner.map((value, index) => (
-            <p key={index}>{value}</p>
-          ))}
-        </div>
+        {winner && (
+          <div className="flex flex-col items-center mt-8 bg-green-200">
+            <p className="mb-2 font-bold text-3xl"> Kazananlar </p>
+            {winner.map((value, index) => (
+              <p key={index}>{value}</p>
+            ))}
+          </div>
+        )}
       </main>
     </div>
   );
